@@ -1,19 +1,28 @@
 #root {
-  min-height: 100vh; /* Change to viewport height instead of percentage */
+  min-height: 100vh;
   width: 100%;
   display: flex;
-  max-width: 1280px; /* Keep your existing max-width */
-  /* margin: 0 auto;
-  padding: 0 20px; */
+  max-width: 1000px; /* Reduced from 1280px */
+  margin: 0 auto;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
+  scale: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
   height: 100%;
+  width: 100%; /* Force full width */
+  max-width: 1280px;
+  margin: 0 auto;
 
   background-blend-mode: lighten;
 }
