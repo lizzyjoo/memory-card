@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Scoreboard from "./components/Scoreboard";
 import Card from "./components/Card";
+import Pokeball from "./assets/pokeball.svg";
 
 // will handle API fetching and also game state maintenance (best score, current score)
 function App() {
@@ -74,22 +75,37 @@ function App() {
   }, []);
 
   return (
-    <div className="content">
+    <div className="container">
       <div className="header">
-        <div className="title">Memory Card</div>
+        <div className="title">
+          <img src={Pokeball} alt="Pokemon Logo" className="pokeball" />
+          Pokémon Memory Card
+        </div>
         <Scoreboard currentScore={currScore} bestScore={bestScore}></Scoreboard>
       </div>
-      <div className="cardContainer">
-        {cards.map((card) => (
-          <div
-            key={card.id}
-            className="cardDiv"
-            onClick={() => handleCardClick(card.id)}
-          >
-            <Card image={card.image} name={card.name}></Card>
-          </div>
-        ))}
+      <div className="content">
+        <div className="cardContainer">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className="cardDiv"
+              onClick={() => handleCardClick(card.id)}
+            >
+              <Card image={card.image} name={card.name}></Card>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="hover-point"></div>
+              <div className="box-contents"></div>
+            </div>
+          ))}
+        </div>
       </div>
+      {/* <img src={Pikachu} alt="Pikachu" className="pikachu" /> */}
     </div>
   );
 }
