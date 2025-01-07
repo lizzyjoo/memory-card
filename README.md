@@ -2,7 +2,7 @@
 
 ## Demo
 
-![Pokemon Memory Game Demo](./assets/demo.png)
+![Pokemon Memory Game Demo](./src/assets/demo.png)
 
 ### Built With
 
