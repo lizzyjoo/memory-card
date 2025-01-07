@@ -3,6 +3,7 @@
 @font-face {
   font-family: "pokemonSolid";
   src: url("./fonts/pokemonHollow.ttf") format("truetype");
+  font-display: swap;
 }
 
 :root {
